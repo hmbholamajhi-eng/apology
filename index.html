@@ -6,51 +6,303 @@
 <meta name="theme-color" content="#24142f">
 <meta name="description" content="A sincere apology from Bhola to Manas Bhai.">
 <title>Manas... ek baat kehni hai 🙏</title>
+
 <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-<noscript><div class="noscript">Is apology ko kholne ke liye JavaScript enable kar do. 🙏</div></noscript>
-<div class="atmosphere" aria-hidden="true"><div class="mandala"></div><div class="temple-line"></div><div id="particles"></div><div class="diya diya-one">🪔</div><div class="diya diya-two">🪔</div></div>
-<main id="app">
-<section id="opening" class="screen opening" aria-labelledby="opening-title">
-  <div class="eyebrow">From Bhola • with respect</div>
-  <div class="divine-mark" aria-hidden="true"><span>ॐ</span></div>
-  <h1 id="opening-title">Manas... ek baat<br><em>kehni hai</em> 🙏</h1>
-  <p class="subheading">Please isse ek baar poora dekh lena.</p>
-  <button id="openApology" class="primary-button" type="button">Open My Apology <span aria-hidden="true">❤️</span></button>
-</section>
-<section id="letterSection" class="screen letter-section hidden" aria-labelledby="letter-title" aria-live="polite">
-  <article class="letter-card">
-    <div class="letter-cap"><span>Ek chhoti si baat</span><span aria-hidden="true">✦</span></div>
-    <div class="gold-rule"></div>
-    <h2 id="letter-title">Manas Bhai,</h2>
-    <div id="letterText" class="letter-text"></div>
-    <div id="decision" class="decision hidden">
-      <h3>Manas, kya Bhola ko maaf karega?</h3>
-      <div class="actions"><button id="forgiveButton" class="primary-button" type="button">MAAF KIYA <span aria-hidden="true">❤️</span></button><button id="angryButton" class="secondary-button" type="button">ABHI GUSSA HAI <span aria-hidden="true">😤</span></button></div>
-      <p id="reaction" class="reaction" role="status"></p>
-    </div>
-    <p class="signature">Tera dost / bhai,<br><strong>Bhola</strong> ❤️</p>
-  </article>
-</section>
-<section id="celebration" class="screen celebration hidden" aria-labelledby="celebration-title">
-  <canvas id="fireworks" aria-hidden="true"></canvas>
-  <div class="celebration-content">
-    <div class="eyebrow bright">Dil halka hua • dosti zindabad</div>
-    <div class="devi-orbit" aria-hidden="true"><div class="lotus">✺</div><div class="orbit-ring"></div></div>
-    <article class="final-card">
-      <h2 id="celebration-title">MAAF KAR DIYA <span>❤️</span></h2>
-      <p class="thank-you">Thank you, Manas Bhai.</p>
-      <p>Bhola ko pata hai ki sorry bolne se sab kuch instantly fix nahi hota...<br>par dil se sorry bolna zaroori tha.</p>
-      <p class="strong-line">Tu apna hai bhai. ❤️</p>
-      <div class="final-message">Jai Maa Bhagabati 🙏<br><br>Manas bhai,<br>Maa se bas itni si dua hai ki hamari dosti mein jo bhi misunderstanding aayi hai, woh door ho.<br><br><em>— Bhola ❤️</em></div>
-      <div id="audioStatus" class="audio-status" role="status"></div>
-      <div class="audio-controls"><button id="playButton" type="button" aria-label="Play apology music">▶ Play music</button><button id="muteButton" type="button" aria-label="Mute music">♪</button></div>
-    </article>
+
+<noscript>
+  <div class="noscript">
+    Is apology ko kholne ke liye JavaScript enable kar do. 🙏
   </div>
-  <audio id="song" preload="metadata" loop></audio>
-</section>
+</noscript>
+
+<div class="atmosphere" aria-hidden="true">
+  <div class="mandala"></div>
+  <div class="temple-line"></div>
+  <div id="particles"></div>
+
+  <div class="diya diya-one">🪔</div>
+  <div class="diya diya-two">🪔</div>
+</div>
+
+
+<main id="app">
+
+  <!-- =========================
+       OPENING
+  ========================== -->
+  <section
+    id="opening"
+    class="screen opening"
+    aria-labelledby="opening-title"
+  >
+
+    <div class="eyebrow">
+      From Bhola • with respect
+    </div>
+
+    <div class="divine-mark" aria-hidden="true">
+      <span>ॐ</span>
+    </div>
+
+    <h1 id="opening-title">
+      Manas... ek baat<br>
+      <em>kehni hai</em> 🙏
+    </h1>
+
+    <p class="subheading">
+      Please isse ek baar poora dekh lena.
+    </p>
+
+    <button
+      id="openApology"
+      class="primary-button"
+      type="button"
+    >
+      Open My Apology
+      <span aria-hidden="true">❤️</span>
+    </button>
+
+  </section>
+
+
+  <!-- =========================
+       APOLOGY LETTER
+  ========================== -->
+  <section
+    id="letterSection"
+    class="screen letter-section hidden"
+    aria-labelledby="letter-title"
+    aria-live="polite"
+  >
+
+    <article class="letter-card">
+
+      <div class="letter-cap">
+        <span>Ek chhoti si baat</span>
+        <span aria-hidden="true">✦</span>
+      </div>
+
+      <div class="gold-rule"></div>
+
+
+      <!-- Maa Kali image -->
+      <div class="devotional-image devotional-image-top">
+        <img
+          src="./assets/images/maa%20kali.jpeg"
+          alt="Maa Kali"
+          loading="lazy"
+        >
+      </div>
+
+
+      <h2 id="letter-title">
+        Manas Bhai,
+      </h2>
+
+      <div
+        id="letterText"
+        class="letter-text"
+      ></div>
+
+
+      <!-- Forgiveness decision -->
+      <div
+        id="decision"
+        class="decision hidden"
+      >
+
+        <h3>
+          Manas, kya Bhola ko maaf karega?
+        </h3>
+
+        <div class="actions">
+
+          <button
+            id="forgiveButton"
+            class="primary-button"
+            type="button"
+          >
+            MAAF KIYA
+            <span aria-hidden="true">❤️</span>
+          </button>
+
+          <button
+            id="angryButton"
+            class="secondary-button"
+            type="button"
+          >
+            ABHI GUSSA HAI
+            <span aria-hidden="true">😤</span>
+          </button>
+
+        </div>
+
+        <p
+          id="reaction"
+          class="reaction"
+          role="status"
+        ></p>
+
+      </div>
+
+
+      <p class="signature">
+        Tera dost / bhai,<br>
+        <strong>Bhola</strong> ❤️
+      </p>
+
+    </article>
+
+  </section>
+
+
+  <!-- =========================
+       CELEBRATION
+  ========================== -->
+  <section
+    id="celebration"
+    class="screen celebration hidden"
+    aria-labelledby="celebration-title"
+  >
+
+    <canvas
+      id="fireworks"
+      aria-hidden="true"
+    ></canvas>
+
+
+    <div class="celebration-content">
+
+      <div class="eyebrow bright">
+        Dil halka hua • dosti zindabad
+      </div>
+
+
+      <!-- Shri Hari image -->
+      <div class="devotional-image devotional-image-final">
+
+        <img
+          src="./assets/images/shri%20hari.jpeg"
+          alt="Shri Hari"
+          loading="lazy"
+        >
+
+      </div>
+
+
+      <div
+        class="devi-orbit"
+        aria-hidden="true"
+      >
+        <div class="lotus">✺</div>
+        <div class="orbit-ring"></div>
+      </div>
+
+
+      <article class="final-card">
+
+        <h2 id="celebration-title">
+          MAAF KAR DIYA
+          <span>❤️</span>
+        </h2>
+
+        <p class="thank-you">
+          Thank you, Manas Bhai.
+        </p>
+
+        <p>
+          Bhola ko pata hai ki sorry bolne se sab kuch
+          instantly fix nahi hota...
+          <br>
+          par dil se sorry bolna zaroori tha.
+        </p>
+
+        <p class="strong-line">
+          Tu apna hai bhai. ❤️
+        </p>
+
+
+        <div class="final-message">
+
+          Jai Maa Bhagabati 🙏
+
+          <br><br>
+
+          Manas bhai,
+
+          <br>
+
+          Maa se bas itni si dua hai ki hamari dosti mein
+          jo bhi misunderstanding aayi hai, woh door ho.
+
+          <br><br>
+
+          <em>
+            — Bhola ❤️
+          </em>
+
+        </div>
+
+
+        <div
+          id="audioStatus"
+          class="audio-status"
+          role="status"
+        ></div>
+
+
+        <div class="audio-controls">
+
+          <button
+            id="playButton"
+            type="button"
+            aria-label="Play apology music"
+          >
+            ▶ Play music
+          </button>
+
+          <button
+            id="muteButton"
+            type="button"
+            aria-label="Mute music"
+          >
+            ♪
+          </button>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <audio
+      id="song"
+      preload="metadata"
+      loop
+    ></audio>
+
+  </section>
+
 </main>
-<script src="./js/effects.js" defer></script><script src="./js/fireworks.js" defer></script><script src="./js/apology.js" defer></script><script src="./js/celebration.js" defer></script><script src="./js/app.js" defer></script>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script src="./js/effects.js" defer></script>
+
+<script src="./js/fireworks.js" defer></script>
+
+<script src="./js/apology.js" defer></script>
+
+<script src="./js/celebration.js" defer></script>
+
+<script src="./js/app.js" defer></script>
+
 </body>
 </html>
