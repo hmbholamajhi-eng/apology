@@ -1,4 +1,4 @@
-# Manas Bhai Apology Website
+#Demo Apology Website
 
 A static, GitHub Pages-ready apology experience from Bhola to Manas. It uses HTML5, CSS3, vanilla JavaScript, SVG-like CSS motifs, and Canvas fireworks. No tracking, cookies, backend, or external dependencies are used.
 
