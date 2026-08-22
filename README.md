@@ -63,9 +63,7 @@ Open `http://localhost:8000/`. This local URL is only for testing; the project c
 
 Final URL template:
 
-```text
-https://USERNAME.github.io/REPOSITORY-NAME/
-```
+(https://hmbholamajhi-eng.github.io/apology/)
 
 All links use relative paths such as `./css/style.css`, `./js/app.js`, and `./assets/music/apology-song.mp3`, so project-site deployment works.
 
